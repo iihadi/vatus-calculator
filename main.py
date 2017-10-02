@@ -1,7 +1,8 @@
 # Changelog:
 # Abdul Hadi - 20/09/17 - Added the distance function
 # Abdul Hadi - 28/09/17 - Added the initial velocity, final velocity, acceleration and time function
-# Abdul hadi - 29/09/17 - Added a basic UI
+# Abdul Hadi - 29/09/17 - Added a basic UI
+# Abdul Hadi - 02/10/17 - Added rounding function
 
 
 def distance_function():
