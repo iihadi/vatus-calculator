@@ -35,6 +35,8 @@ def distance_function():
         distance = ((v ** 2) - (u ** 2) / (2 * a))
         if distance < 0:
             distance = -distance
+    dec_place = int(input("How many decimal places do you want your answer too?\n"))
+    distance = round(distance, dec_place) 
     print("The value for the distance , s ,  is:", (distance), "m\n")
 
 def initial_velocity_function():
@@ -60,6 +62,8 @@ def initial_velocity_function():
         v = float(input("What is the value of the final velocity?\n"))
         a = float(input("What is the value of the acceleration?\n"))
         initial_velocity = (((v ** 2) - (2 * a * s)) ** 0.5)
+    dec_place = int(input("How many decimal places do you want your answer too?\n"))
+    initial_velocity = round(initial_velocity, dec_place) 
     print("The value for the initial velocity , u , is:", (initial_velocity), "m/s\n")
 
 def final_velocity_function():
@@ -85,6 +89,8 @@ def final_velocity_function():
         u = float(input("What is the value of the initial velocity?\n"))
         a = float(input("What is the value of the acceleration?\n"))
         final_velocity = (((u ** 2) + (2 * a * s)) ** 0.5)
+    dec_place = int(input("How many decimal places do you want your answer too?\n"))
+    fianl_velocity = round(final_velocity, dec_place) 
     print("The value for the final velocity , v ,  is:", (final_velocity), "m/s\n")
 
 def acceleration_function():
@@ -110,6 +116,8 @@ def acceleration_function():
         u = float(input("What is the value of the initial velocity?\n"))
         v = float(input("What is the value of the final velocity?\n"))
         acceleration = (((v**2)-(u**2)/(2*s)))
+    dec_place = int(input("How many decimal places do you want your answer too?\n"))
+    acceleration = round(acceleration, dec_place) 
     print("The value for the acceleration , a , is:", (acceleration), "m/s^2\n")
 
 def time_function():
@@ -135,6 +143,8 @@ def time_function():
         u = float(input("What is the value of the initial velocity?\n"))
         v = float(input("What is the value of the final velocity?\n"))
         time = ((2*s)/(u+v))
+    dec_place = int(input("How many decimal places do you want your answer too?\n"))
+    time = round(time, dec_place) 
     print("The value for the time , t , is:", (time), "s\n")
 
 user_choice = int(input("Welcome to the VATUS calculator\nWhat value do you want to calculate?\n1 = Distance\n2 = Initial Velocity\n3 = Final Velocity\n4 = Acceleration\n5 = Time\nPlease TYPE the appropriate number\n"))
