@@ -1,61 +1,78 @@
+#VATUS GUI Mk2
+from tkinter import *
 
-#Adam Stevenson 27/09/2017
-#VATUS GUI
-import tkinter as tk
+"""
+varS = IntVar()
+Checkbutton(master, text="S", variable=varS).grid(column=0,row=1, sticky=W)
+varU = IntVar()
+Checkbutton(master, text="U", variable=varU).grid(column=1, row=1, sticky=W)
+varV = IntVar()
+Checkbutton(master, text="V", variable=varV).grid(column=2, row=1, sticky=W)
+varA = IntVar()
+Checkbutton(master, text="A", variable=varA).grid(column=3, row=1, sticky=W)
+varT = IntVar()
+Checkbutton(master, text="T", variable=varT).grid(column=4, row=1, sticky=W)
+"""
+class LabeledCheckbutton(Frame):
+    def __init__(self, root):
+        Frame.__init__(self, root)
+        self.checkbutton = Checkbutton(self)
+        self.label = Label(self)
+        self.label.grid(row=0, column=0)
+        self.checkbutton.grid(row=0, column=1)
 
-class Application(tk.Frame):
-    def __init__(self, master=None):
-        tk.Frame.__init__(self, master)
-        self.pack()
-        self.createWidgets()
+class LabeledCheckbutton2(Frame):
+    def __init__(self, root):
+        Frame.__init__(self, root)
+        self.checkbutton = Checkbutton(self)
+        self.label = Label(self)
+        self.label.grid(row=0, column=0)
+        self.checkbutton.grid(row=0, column=2)
 
-    def createWidgets(self):
-        self.s_button = tk.Button(self)
-        self.s_button["text"] = "S"
-        self.s_button["command"] = self.s_print
-        self.s_button.pack(side="left")
+class LabeledCheckbutton3(Frame):
+    def __init__(self, root):
+        Frame.__init__(self, root)
+        self.checkbutton = Checkbutton(self)
+        self.label = Label(self)
+        self.label.grid(row=0, column=0)
+        self.checkbutton.grid(row=0, column=3)
 
-        self.u_button = tk.Button(self)
-        self.u_button["text"] = "U"
-        self.u_button["command"] = self.u_print
-        self.u_button.pack(side="left")
+class LabeledCheckbutton4(Frame):
+    def __init__(self, root):
+        Frame.__init__(self, root)
+        self.checkbutton = Checkbutton(self)
+        self.label = Label(self)
+        self.label.grid(row=0, column=0)
+        self.checkbutton.grid(row=0, column=4)
 
-        self.v_button = tk.Button(self)
-        self.v_button["text"] = "V"
-        self.v_button["command"] = self.v_print
-        self.v_button.pack(side="left")
+class LabeledCheckbutton5(Frame):
+    def __init__(self, root):
+        Frame.__init__(self, root)
+        self.checkbutton = Checkbutton(self)
+        self.label = Label(self)
+        self.label.grid(row=0, column=0)
+        self.checkbutton.grid(row=0, column=5)
 
-        self.a_button = tk.Button(self)
-        self.a_button["text"] = "A"
-        self.a_button["command"] = self.a_print
-        self.a_button.pack(side="left")
+root = Tk()
+labeledcb = LabeledCheckbutton(root)
+labeledcb.label.configure(text="S")
+labeledcb.grid(row=0, column=0)
 
-        self.t_button = tk.Button(self)
-        self.t_button["text"] = "T"
-        self.t_button["command"] = self.t_print
-        self.t_button.pack(side="left")
+labeledcb2 = LabeledCheckbutton2(root)
+labeledcb2.label.configure(text="U")
+labeledcb2.grid(row=1, column=0)
 
-        self.QUIT = tk.Button(self, text="QUIT", fg="red", command=root.destroy)
+labeledcb2 = LabeledCheckbutton2(root)
+labeledcb2.label.configure(text="V")
+labeledcb2.grid(row=2, column=0)
 
-        self.QUIT.pack(side="bottom")
+labeledcb2 = LabeledCheckbutton2(root)
+labeledcb2.label.configure(text="A")
+labeledcb2.grid(row=3, column=0)
 
+labeledcb2 = LabeledCheckbutton2(root)
+labeledcb2.label.configure(text="T")
+labeledcb2.grid(row=4, column=0)
 
-    def s_print(self):
-        print ("S")
-        
-    def u_print(self):
-        print ("U")
-
-    def v_print(self):
-        print ("V")
-
-    def a_print(self):
-        print ("A")
-
-    def t_print(self):
-        print ("T")
-
-        
-root = tk.Tk()
-app = Application(master=root)
-app.mainloop()
+root.title("VATUS")
+mainloop()
